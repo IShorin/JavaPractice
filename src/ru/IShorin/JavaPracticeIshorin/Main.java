@@ -45,9 +45,8 @@ public class Main {
     }
 
     public static void harmonySum()  {
-        double num=1;
         for (double i = 1; i <10; i++) {
-            double var =num/i;
+            double var =1.0/i;
             String message=String.format("%.2f",var);
             System.out.print(message);
             System.out.print(" ");
