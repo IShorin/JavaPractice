@@ -17,28 +17,11 @@ class Circle {
 
 }
 class CircleTest {
-    private Circle diametr;
 
-    public CircleTest(Circle a){
-        diametr=a;
+    public static void main(String[] args) {
+        int a= 5;
+        Circle obx = new Circle(a);
+        System.out.println(obx);
     }
 
-    public Circle getDiametr() {
-        return diametr;
-    }
-
-    public void setDiametr(Circle diametr) {
-        this.diametr = diametr;
-    }
-
-    public  Circle method(diametr) {
-        Circle object = new Circle(a);
-        return object;
-    }
-}
-
-
-public static void main(String[] args)
-{
-    CircleTest obx=new CircleTest();
 }
