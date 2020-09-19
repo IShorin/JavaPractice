@@ -66,5 +66,49 @@ class Hand{
     }
 }
 /////////////////////////Task 3
+class Book{
+    private String author;
+    private String name;
+    private int year;
+    public Book(String a, String b, int c){
+        author=a;
+        name=b;
+        year=c;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+}
+
+class BookTest{
+    public static void main(String[] args) {
+        String a="Достоевский";
+        String b="Ушел домой";
+        int c= 1945;
+        Book obx=new Book(a,b,c);
+        System.out.println(obx);
+    }
+}
 
 
