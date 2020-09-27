@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.IShorin.JavaPractice.laba6</OriginalElement>
+  <nodes>
+    <node x="148.25" y="0.0">ru.IShorin.JavaPractice.laba6.Movable</node>
+    <node x="0.0" y="170.0">ru.IShorin.JavaPractice.laba6.Rectangle</node>
+    <node x="204.0" y="214.0">ru.IShorin.JavaPractice.laba6.MoveRectangle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.IShorin.JavaPractice.laba6.Rectangle" target="ru.IShorin.JavaPractice.laba6.Movable">
+      <point x="0.0" y="-160.0" />
+      <point x="92.0" y="145.0" />
+      <point x="184.5" y="145.0" />
+      <point x="-36.25" y="60.0" />
+    </edge>
+    <edge source="ru.IShorin.JavaPractice.laba6.MoveRectangle" target="ru.IShorin.JavaPractice.laba6.Movable">
+      <point x="0.0" y="-116.0" />
+      <point x="349.5" y="145.0" />
+      <point x="257.0" y="145.0" />
+      <point x="36.25" y="60.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="247.5" y="245.0" />
+  <SelectedNodes>
+    <node>ru.IShorin.JavaPractice.laba6.MoveRectangle</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
