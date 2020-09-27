@@ -2,7 +2,6 @@ package ru.IShorin.JavaPractice.laba8;
 
 import javax.swing.*;
 import java.awt.*;
-
 public class Shape {
 
     public static void main(String[] args) {
