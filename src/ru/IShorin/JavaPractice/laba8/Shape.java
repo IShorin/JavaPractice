@@ -2,29 +2,95 @@ package ru.IShorin.JavaPractice.laba8;
 
 import javax.swing.*;
 import java.awt.*;
-public class Shape {
+import java.util.ArrayList;
+import java.util.Random;
 
-    public static void main(String[] args) {
-        JFrame jf=new JFrame("For2D");
-        jf.setSize(200,150);
-        jf.setVisible(true);
-        jf.add(new Board());
+ class DrawerPanel extends JPanel {
+    ArrayList<Shape> shapes = new ArrayList<Shape>();
+    public boolean animating = false;
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        setDoubleBuffered(true);
+        for (Shape shape : shapes) {
+            shape.draw(g);
+        }
     }
 
+    public void addRectangle() {
+        Rect rect = new Rect();
+        rect.randomFill();
+        shapes.add(rect);
+    }
+
+    public void addCircle() {
+        Circle circle = new Circle();
+        circle.randomFill();
+        shapes.add(circle);
+    }
+
+    public void nextState() {
+        for (Shape shape : shapes) {
+            shape.y += shape.speed;
+            if (shape.y <= 0 || shape.y >= 180) {
+                shape.speed = -shape.speed;
+            }
+        }
+        repaint();
+    }
 }
-class Board extends Panel{
-    public void paintComponent(Graphics g) {
-        super.paintComponents(g);
-        draw1(g);;
+
+class Shape {
+    public int x, y;
+    public int width, height;
+    public int speed = +2;
+    public Color color = Color.RED;
+
+    public int randint(int min, int max) {
+        Random rnd = new Random();
+        return min + rnd.nextInt(max - min);
     }
 
-    private void draw1(Graphics g){
-        Graphics2D g2d=(Graphics2D)g;
-        g2d.setPaint(Color.blue.darker());
-        int w=getWidth();
-        int h=getHeight();
-        g2d.drawLine(0,0,w,h);
-        g2d.drawOval(w/2-50,h/2,100,100);
+    public Color randomColor() {
+        Color[] colors = new Color[]{new Color(0, 255, 0), new Color(0, 255, 255), new Color(157, 182, 194),
+                new Color(106, 0, 255), new Color(200, 50, 255), new Color(255, 60, 200), new Color(255, 80, 80)};
+        return colors[randint(0, colors.length)];
+    }
+
+    public void randomFill() {
+        this.x = randint(20, 380);
+        this.y = randint(20, 180);
+        this.width = randint(10, 40);
+        this.height = randint(10, 40);
+        this.color = randomColor();
+    }
+
+    public void draw(Graphics g) {
+    }
+}
+
+
+class Rect extends Shape {
+    @Override
+    public void draw(Graphics g) {
+        g.setColor(color);
+        g.fillRect(x, y, width, height);
+    }
+}
+
+
+class Circle extends Shape {
+    @Override
+    public void randomFill() {
+        super.randomFill();
+        this.width = this.height;
+    }
+
+    @Override
+    public void draw(Graphics g) {
+        g.setColor(color);
+        g.fillOval(x, y, width, height);
     }
 }
 
