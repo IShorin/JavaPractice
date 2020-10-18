@@ -24,12 +24,12 @@ import java.awt.event.ActionListener;
         faceCombo.addItem("Times New Roman");
         faceCombo.addItem("MS Sans Serif");
         faceCombo.addItem("Courier New");
-        faceCombo.setBounds(30, 40, 320, 40);
+        faceCombo.setBounds(30, 40, 250, 40);
         frame.add(faceCombo);
 
         Label lb1 = new Label("Choose color");
         lb1.setFont(new Font("Times New Roman", Font.LAYOUT_RIGHT_TO_LEFT, 14));
-        lb1.setBounds(30, 90, 300, 20);
+        lb1.setBounds(30, 90, 250, 20);
         frame.add(lb1);
 //создаем меню типа списка и добавляем туда названия 3х цветов
         JComboBox faceCombo2 = new JComboBox();
@@ -37,7 +37,7 @@ import java.awt.event.ActionListener;
         faceCombo2.addItem("Blue");
         faceCombo2.addItem("Red");
         faceCombo2.addItem("Black");
-        faceCombo2.setBounds(30, 120, 320, 40);
+        faceCombo2.setBounds(30, 120, 250, 40);
         frame.add(faceCombo2);
 
 
@@ -47,7 +47,7 @@ import java.awt.event.ActionListener;
         bigField.setBackground(Color.WHITE);
         bigField.setForeground(Color.BLUE);
         bigField.setFont(new Font("Times New Roman", Font.BOLD, 15));
-        bigField.setBounds(30, 170, 320, 40);
+        bigField.setBounds(30, 170, 250, 40);
 
         faceCombo.addActionListener(new ActionListener() {
             @Override
@@ -79,7 +79,7 @@ import java.awt.event.ActionListener;
             }
         });
         frame.add(bigField);
-        frame.setSize(400,300);
+        frame.setSize(350,300);
 
         frame.setLayout(null);
         frame.setVisible(true);
