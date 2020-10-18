@@ -1,11 +1,12 @@
 package ru.IShorin.JavaPractice.laba8;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
 
- class DrawerPanel extends JPanel {
+class DrawerPanel extends JPanel {
     ArrayList<Shape> shapes = new ArrayList<Shape>();
     public boolean animating = false;
 
