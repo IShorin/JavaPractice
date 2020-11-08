@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class ex17_1 {
     public static void main(String []args) throws IOException {
-        File file = new File("C:\\Users\\nikol\\Desktop\\test.txt");
+        File file = new File("C:\\Users\\Vano\\Desktop\\test.txt");
         try (FileWriter writer = new FileWriter(file, false)){
             String str = "Test string";
             writer.write(str);

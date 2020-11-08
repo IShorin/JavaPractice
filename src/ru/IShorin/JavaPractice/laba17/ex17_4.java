@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ex17_4 {
     public static void main(String []args) throws IOException {
-        File file = new File("C:\\Users\\nikol\\Desktop\\test.txt");
+        File file = new File("C:\\Users\\Vano\\Desktop\\test.txt");
         try (FileWriter writer = new FileWriter(file, true)){
             String str;
             Scanner scanner = new Scanner(System.in);

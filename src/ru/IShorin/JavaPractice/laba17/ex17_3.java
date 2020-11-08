@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ex17_3 {
     public static void main(String []args) throws IOException {
-        File file = new File("C:\\Users\\nikol\\Desktop\\test.txt");
+        File file = new File("C:\\Users\\Vano\\Desktop\\test.txt");
         FileInputStream fileInputStream = new FileInputStream(file);
 
         int i;
