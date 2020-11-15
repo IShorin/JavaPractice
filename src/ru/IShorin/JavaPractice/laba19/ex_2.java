@@ -4,7 +4,7 @@ import ru.IShorin.JavaPractice.Student;
 
 import java.util.Scanner;
 
-public class main {
+class ex_2 {
     public static void main(String[] args) {
         Student[] students = {
                 new Student("Boby", 23, 10003,1203),
