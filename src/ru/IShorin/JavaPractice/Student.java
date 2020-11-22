@@ -6,6 +6,7 @@ public class Student {
     private String name;
     private int age;
     private int IDnum;
+    private String dateofbirth;
     private double gpa;//только добавляем в класс средний балл
 
     public Student(String name, int age, int IDnum, double gpa) {
@@ -13,8 +14,11 @@ public class Student {
         this.age = age;
         this.IDnum = IDnum;
         this.gpa = gpa;
-    }
 
+    }
+    public Student(String dateofbirth) {
+        this.dateofbirth = dateofbirth;
+    }
 
     public boolean compareTo(Student student) {
         if (student.getIDnum() < IDnum) return true;
@@ -71,5 +75,32 @@ public class Student {
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+    public String toString(String str) {
+        String[] words = dateofbirth.split(" ");
+        char[] tmp = words[2].toCharArray();
+        if (str.compareTo("Short")==0){
+            return words[0] + "." + words[1] + "." + tmp[2] + tmp[3];
+        }
+        if (str.compareTo("Middle")==0){
+            return words[0] + "." + words[1] + "." + words[2];
+        }
+        if (str.compareTo("Full")==0){
+            switch (words[1]){
+                case "01" : return words[0] + " January " + words[2];
+                case "02" : return words[0] + " February " + words[2];
+                case "03" : return words[0] + " March " + words[2];
+                case "04" : return words[0] + " April " + words[2];
+                case "05" : return words[0] + " May " + words[2];
+                case "06" : return words[0] + " June " + words[2];
+                case "07" : return words[0] + " July " + words[2];
+                case "08" : return words[0] + " August " + words[2];
+                case "09" : return words[0] + " September " + words[2];
+                case "10" : return words[0] + " October " + words[2];
+                case "11" : return words[0] + " November " + words[2];
+                case "12" : return words[0] + " December " + words[2];
+            }
+        }
+        return null;
     }
 }
