@@ -25,8 +25,6 @@ class ex22_3 {
         Date getDateOfFinishTask = new Date();
         System.out.println("Task completed: " + getDateOfFinishTask);
     }
-}
-public class main{
     public static void main(String[] args) {
         ex22_3 devInf = new ex22_3();
         String surname = devInf.InputFio();
