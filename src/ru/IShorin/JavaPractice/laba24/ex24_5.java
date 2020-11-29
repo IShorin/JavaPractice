@@ -35,7 +35,7 @@ import java.util.stream.Stream;
                 }
                 else if(sb.toString().toLowerCase().charAt(sb.length()-1) == w[i].toLowerCase().charAt(0)){
                     sb.append(" " + w[i]);
-                    w[i] = "";
+                    w[i] = " ";
                 }
             }
 
