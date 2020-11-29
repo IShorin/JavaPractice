@@ -17,7 +17,7 @@ class ex22_3 {
         Date getDateOfTask = new Date();
         Long time = getDateOfTask.getTime();
         long anotherDate = -7;
-        time = time + (60 * 60 * 24 * 1000 * anotherDate); //неделю назад
+        time = time + (60 * 60 * 24 * 1000 * anotherDate);
         getDateOfTask = new Date(time);
         System.out.println("Task received: " + getDateOfTask);
     }
