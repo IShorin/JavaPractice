@@ -24,7 +24,7 @@ import java.util.Scanner;
     public void numHandler() {
         char[] chars = number.toCharArray();
         int j = 0;
-        if (number.contains("+")) {
+        if (number.startsWith("+")) {
             mainNumber.add("+");
             for (int i = 1; i < chars.length - 7; i++) {
                 mainNumber.add(String.valueOf(chars[i]));
